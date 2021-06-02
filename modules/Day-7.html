@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="image/x-icon" rel="icon"
+        href="https://certifiedblackhatin.files.wordpress.com/2021/03/cropped-56bae-cropped-black-white-and-triangle-data-chase-games-logo-2-2.png?w=192">
+    <title>Sales Module | MODULE 7</title>
+    <link rel="stylesheet" href="/assets/css/vendor.min.css">
+    <link rel="stylesheet" href="/assets/css/theme.min.css">
+    <link rel="stylesheet" href="/modules/styles.css">
+    <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+
+</head>
+<style>
+    #play {
+        text-align: center;
+    }
+
+    #status {
+        text-align: center;
+        font-size: large;
+    }
+
+    #status span.status {
+        display: none;
+        font-weight: bold;
+    }
+
+    span.status.complete {
+        color: green;
+    }
+
+    span.status.incomplete {
+        color: red;
+    }
+
+    #status.complete span.status.complete {
+        display: inline;
+    }
+
+    #status.incomplete span.status.incomplete {
+        display: inline;
+    }
+</style>
+
+<body>
+    <div class="bg-dark" style="
+        background-image: url(/assets/svg/components/abstract-shapes-20.svg)
+      ">
+        <div class="container space-1 space-top-lg-2 space-bottom-lg-3">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="d-none d-lg-block">
+                        <h1 class="h2 text-white">Sales Module</h1>
+                    </div>
+
+                    <!-- Breadcrumb -->
+                    <ol class="breadcrumb breadcrumb-light breadcrumb-no-gutter mb-0">
+                        <li class="h6 text-white">
+                            MODULE 7
+                        </li>
+                    </ol>
+                    <!-- End Breadcrumb -->
+                </div>
+
+                <div class="col-auto">
+                    <div class="d">
+                        <a class="btn btn-sm btn-soft-light" href="/home.html">
+                            Profile
+                        </a>
+                    </div>
+
+                    <!-- Responsive Toggle Button -->
+
+                    <!-- End Responsive Toggle Button -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top: 100px;">
+        <video style="display: block;margin: 0 auto;border-radius: 5mm;" controls="true" poster="" id="video" src="">
+
+        </video>
+    </div>
+    <div id="status" class="incomplete">
+        <span style="color: white;">Play status: </span>
+        <span class="status complete">COMPLETE</span>
+        <span class="status incomplete">INCOMPLETE</span>
+        <br />
+    </div>
+    <div id="play">
+        <span style="color: whitesmoke; text-decoration-style: solid;font-size: large;">Remaining Time : <span
+                id="remaining" style="color: whitesmoke; text-decoration-style: solid;">0</span> </span>
+    </div>
+    <div class="custom-model-main">
+        <div class="custom-model-inner">
+            <div class="close-btn">×</div>
+            <div class="custom-model-wrap">
+                <div class="pop-up-content-wrap">
+                    <h2>Certified blackHat<h2>
+                            <h4>Your Response has been recorded 👏</h4>
+                            <h6>Thank you! see you in the next module</h6>
+                            <a class="btn btn-sm btn-soft-dark" href="/home.html">Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-overlay"></div>
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        <form id="contact">
+            <h3>Sale's Module <span id="day1un" class="fas fa-lock nav-icon"></span></h3>
+            <h4>Questionarie</h4>
+
+            <fieldset>
+                <h4 id="q1">who is our prime minister?</h4>
+                <input id="a1" disabled placeholder="Your answer" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <h4 id="q2">who is our prime minister?</h4>
+                <input id="a2" disabled placeholder="Your answer" type="text" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <h4 id="q3">who is our prime minister?</h4>
+                <input id="a3" disabled placeholder="Your answer" type="text" tabindex="3" required>
+            </fieldset>
+            <fieldset>
+                <h4>Feedback / queries?</h4>
+                <textarea id="a4" disabled placeholder="Type your answer" tabindex="5" required></textarea>
+            </fieldset>
+            <fieldset>
+                <button type="button" class="Click-here" onclick="Add_Doc_WithID()" id="submit">submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/theme.min.js"></script>
+<script src="/assets/js/vendor.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script>
+    $(".Click-here").on('click', function () {
+        $(".custom-model-main").addClass('model-open');
+    });
+    $(".close-btn, .bg-overlay").click(function () {
+        $(".custom-model-main").removeClass('model-open');
+    });
+</script>
+
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyBrk1_BujMlKHws0cZDQ6LXv3JIPCPbaMY",
+        authDomain: "training-module-82a7f.firebaseapp.com",
+        projectId: "training-module-82a7f",
+        storageBucket: "training-module-82a7f.appspot.com",
+        messagingSenderId: "283721079149",
+        appId: "1:283721079149:web:4e8a2176f5fedd05f02264",
+        measurementId: "G-7CYVNCRK5E"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    let provider = new firebase.auth.GoogleAuthProvider();
+
+    function checkAuthState() {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                var cloudDB = firebase.firestore();
+                var docRef = cloudDB.collection("Videos").doc("module7");
+                docRef.get()
+                    .then(function (doc) {
+                        if (doc.exists) {
+                            Video = document.getElementById('video');
+                            Video.src = doc.data().Link;
+
+                        } else {
+                            console.log("doc error");
+                        }
+                    }
+                    );
+                function RetrieveData_inDocument() {
+                    var cloudDB = firebase.firestore();
+                    cloudDB.collection("Questions").doc('module7').get()
+                        .then(function (doc) {
+                            if (doc.exists) {
+                                var q1, q2, q3
+
+                                q1 = document.getElementById('q1');
+                                q2 = document.getElementById('q2');
+                                q3 = document.getElementById('q3');
+
+                                q1.innerText = doc.data().question1;
+                                console.log(q1);
+                                q2.innerText = doc.data().question2;
+                                q3.innerText = doc.data().question3;
+
+                            } else {
+                                console.log("doc error");
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log("error", error);
+                        })
+
+                }
+                RetrieveData_inDocument();
+                //////user defined
+            } else {
+                window.location = "/index.html"
+
+            }
+        })
+    }
+    checkAuthState()
+
+
+
+    function Add_Doc_WithID() {
+        var cloudDB = firebase.firestore();
+        var authEmail = firebase.auth().currentUser.email;
+        firebase.auth().onAuthStateChanged(user => {
+
+            var a1, a2, a3, a4
+
+
+            a1 = document.getElementById('a1').value;
+            a2 = document.getElementById('a2').value;
+            a3 = document.getElementById('a3').value;
+            a4 = document.getElementById('a4').value;
+            cloudDB.collection("Q&A").doc(authEmail).update({
+                Answer71: a1,
+                Answer72: a2,
+                Answer73: a3,
+                Answer74: a4,
+            })
+                .then(function (docRef) {
+                    console.log("document written",);
+                })
+                .catch(function (error) {
+                    console.error("error fatal", error);
+                })
+
+
+            cloudDB.collection("modules").doc(authEmail).update({
+                module7: true,
+            })
+
+
+        })
+
+
+    }
+</script>
+
+</html>

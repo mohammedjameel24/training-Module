@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Title -->
+  <link type="image/x-icon" rel="icon"
+    href="https://certifiedblackhatin.files.wordpress.com/2021/03/cropped-56bae-cropped-black-white-and-triangle-data-chase-games-logo-2-2.png?w=192">
+  <title>Sales Module | certifiedblackhat</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+  <!-- Favicon -->
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="/assets/css/theme.min.css">
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- CSS Front Template -->
+  <link rel="stylesheet" href="/assets/css/vendor.min.css">
+  <script
+    data-dapp-detection="">!function () { let e = !1; function n() { if (!e) { const n = document.createElement("meta"); n.name = "dapp-detected", document.head.appendChild(n), e = !0 } } if (window.hasOwnProperty("ethereum")) { if (window.__disableDappDetectionInsertion = !0, void 0 === window.ethereum) return; n() } else { var t = window.ethereum; Object.defineProperty(window, "ethereum", { configurable: !0, enumerable: !1, set: function (e) { window.__disableDappDetectionInsertion || n(), t = e }, get: function () { if (!window.__disableDappDetectionInsertion) { const e = arguments.callee; e && e.caller && e.caller.toString && -1 !== e.caller.toString().indexOf("getOwnPropertyNames") || n() } return t } }) } }();</script>
+</head>
+
+<body>
+  <style>
+    @media (min-width:768px) {
+      .card mb-5 {
+        margin: 0px 0px;
+      }
+
+      .card mb-3 mb-lg-5 {
+        margin: 0px 0px;
+      }
+
+    }
+  </style>
+  <!-- ========== MAIN ========== -->
+  <main id="content" role="main" class="bg-light">
+    <!-- Breadcrumb Section -->
+    <div class="bg-dark" style="
+              background-image: url(./assets/svg/components/abstract-shapes-20.svg);
+            ">
+      <div class="container space-1 space-top-lg-2 space-bottom-lg-3">
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="d-none d-lg-block">
+              <h1 class="h2 text-white">Personal info</h1>
+            </div>
+
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb breadcrumb-light breadcrumb-no-gutter mb-0">
+              <li class="breadcrumb-item">Account</li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Personal info
+              </li>
+            </ol>
+            <!-- End Breadcrumb -->
+          </div>
+
+          <div class="col-auto">
+            <div class="d-none d-lg-block">
+              <a class="btn btn-sm btn-soft-light" id="logout">
+                Log out
+              </a>
+            </div>
+
+            <!-- Responsive Toggle Button -->
+            <button type="button" class="navbar-toggler btn btn-icon btn-sm rounde-circle d-lg-none"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNav" data-toggle="collapse"
+              data-target="#sidebarNav">
+              <span class="navbar-toggler-default">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor"
+                    d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z">
+                  </path>
+                </svg>
+              </span>
+              <span class="navbar-toggler-toggled">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor"
+                    d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z">
+                  </path>
+                </svg>
+              </span>
+            </button>
+            <!-- End Responsive Toggle Button -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Breadcrumb Section -->
+
+    <div class="custom-model-main">
+      <div class="custom-model-inner">
+        <div class="close-btn">×</div>
+        <div class="custom-model-wrap">
+          <div class="pop-up-content-wrap">
+            <h2>Certified blackHat<h2>
+                <h4>Details Saved 👏</h4>
+                <h6>Thank you! </h6>
+          </div>
+        </div>
+      </div>
+      <div class="bg-overlay"></div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="container space-1 space-top-lg-0 space-bottom-lg-2 mt-lg-n10">
+      <div class="row">
+        <div class="col-lg-3">
+          <!-- Navbar -->
+          <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
+            <div id="sidebarNav" class="collapse navbar-collapse navbar-vertical">
+              <!-- Card -->
+              <div class="card mb-5" style="margin:90px 0px;">
+                <div class="card-body">
+                  <!-- Avatar -->
+
+                  <!-- Nav -->
+                  <h6 class="text-cap small">Account</h6>
+
+                  <!-- List -->
+                  <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="index.html">
+                        <i class="fas fa-id-card nav-icon"></i> Personal info
+                      </a>
+                    </li>
+
+                    <!-- End List -->
+
+                    <h6 class="text-cap small">Sales Module</h6>
+
+                    <!-- List -->
+                    <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/modules/Day-1.html" target="_blank">
+                          <i class="fas fa-unlock nav-icon" data-target="#LockedContent"></i> module-1
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a id="module-2" class="nav-link" target="blank" href="/modules/Day-2.html"
+                          onclick="return false">
+                          <i id="module-2un" class="fas fa-lock nav-icon"></i> module-2 &ensp;<span id="cnt"></span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a id="module-3" class="nav-link" target="blank" href="/modules/Day-3.html"
+                          onclick="return false">
+                          <i id="module-3un" class="fas fa-lock nav-icon"></i> module-3 &ensp;<span id="cnt1"></span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a id="module-4" class="nav-link" target="blank" href="/modules/Day-4.html"
+                          onclick="return false">
+                          <i id="module-4un" class="fas fa-lock nav-icon"></i> module-4 &ensp;<span id="cnt2"></span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a id="module-5" class="nav-link" target="blank" href="/modules/Day-5.html"
+                          onclick="return false">
+                          <i id="module-5un" class="fas fa-lock nav-icon"></i> module-5 &ensp;<span id="cnt3"></span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a id="module-6" class="nav-link" target="blank" href="/modules/Day-6.html"
+                          onclick="return false">
+                          <i id="module-6un" class="fas fa-lock nav-icon"></i> module-6 &ensp;<span id="cnt4"></span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a id="module-7" class="nav-link" target="blank" href="/modules/Day-7.html"
+                          onclick="return false">
+                          <i id="module-7un" class="fas fa-lock nav-icon"></i> module-7 &ensp;<span id="cnt5"></span>
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End List -->
+                    <!-- End Modal cancel subscription -->
+
+                    <div class="d-lg-none">
+                      <div class="dropdown-divider"></div>
+
+                      <!-- List -->
+                      <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
+                        <li class="nav-item">
+                          <a class="btn btn-sm btn-soft-dark" onclick="LogoutUser()">Log out</a>
+                        </li>
+                      </ul>
+                      <!-- End List -->
+                    </div>
+
+                    <!-- End Nav -->
+                </div>
+              </div>
+              <!-- End Card -->
+            </div>
+          </div>
+          <!-- End Navbar -->
+        </div>
+
+        <div class="col-lg-9">
+          <!-- CTA Section -->
+
+          <!-- End CTA Section -->
+          <!-- Card -->
+          <div class="card mb-3 mb-lg-5" style="margin:80px 0px;">
+            <div class="card-header">
+              <h5 class="card-title">Basic info</h5>
+            </div>
+
+            <!-- Form Group -->
+            <div class="row form-group">
+              <label style="padding-left:50px;" for="firstNameLabel" class="col-sm-3 col-form-label input-label">Name
+                <i class="far fa-question-circle text-body ml-1" data-toggle="tooltip" data-placement="top"
+                  title="Displayed on public profile."></i></label>
+
+              <div class="col-sm-9">
+                <div>
+                  <input type="text" class="form-control" name="name" id="user-pname" placeholder="Your Name" value=""
+                    required="">
+                </div>
+              </div>
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="row form-group">
+              <label style="padding-left:50px;" for="emailLabel"
+                class="col-sm-3 col-form-label input-label">Email</label>
+
+              <div class="col-sm-9">
+                <input type="text" class="form-control" name="name" id="user-pemail" placeholder="Your Email" value=""
+                  required="">
+              </div>
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="js-add-field row form-group" data-hs-add-field-options="{
+                            &quot;template&quot;: &quot;#addPhoneFieldTemplate&quot;,
+                            &quot;container&quot;: &quot;#addPhoneFieldContainer&quot;,
+                            &quot;defaultCreated&quot;: 0
+                          }">
+              <label style="padding-left:50px;" for="phoneLabel" class="col-sm-3 col-form-label input-label">Phone
+              </label>
+
+              <div class="col-sm-9">
+                <div class="input-group align-items-center">
+                  <input type="number" class="form-control" name="name" id="user-pphone" placeholder="Your Phone no."
+                    value="" required="">
+                </div>
+              </div>
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+            <div class="row form-group">
+              <label style="padding-left:50px;" class="col-sm-3 col-form-label input-label">Gender</label>
+
+              <div class="col-sm-9">
+                <div class="input-group input-group-md-down-break">
+                  <!-- Custom Radio -->
+                  <div class="form-control">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" type="checkbox" name="gender" id="Male">
+                      <label class="custom-control-label" for="Male">Male</label>
+                    </div>
+                  </div>
+                  <!-- End Custom Radio -->
+                  <!-- Custom Radio -->
+                  <div class="form-control">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" type="checkbox" name="gender" id="Female"
+                        value="Female">
+                      <label class="custom-control-label" for="Female">Female</label>
+                    </div>
+                  </div>
+                  <!-- End Custom Radio -->
+
+                  <!-- Custom Radio -->
+                  <div class="form-control">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" type="checkbox" name="gender" value="Other"
+                        id="Other" checked="">
+                      <label class="custom-control-label" for="Other">Other</label>
+                    </div>
+                  </div>
+
+                  <p id="text" style="display:none"></p>
+                  <!-- End Custom Radio -->
+                </div>
+              </div>
+            </div>
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+
+            <!-- End Form Group -->
+
+            <!-- Form Group -->
+
+            <!-- End Form Group -->
+
+            <!-- Footer -->
+            <div class="card-footer d-flex justify-content-end">
+              <button class="btn btn-primary" id="submit" type="submit">
+                Save Changes
+              </button>
+            </div>
+            <!-- End Footer -->
+            <!-- <form name="counter">
+                  <input type="text" size="8" name="chandresh" id="counter">
+                </form> -->
+            </form>
+          </div>
+          <!-- End Body -->
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="card mb-3 mb-lg-5">
+          <!-- Alert -->
+          <div class="alert alert-primary media mb-5 mb-md-7" role="alert">
+            <i class="fas fa-exclamation-circle mt-1 mr-4"></i>
+            <div class="media-body">
+              <h4 class="alert-heading">Do's & Dont's</h4>
+              <hr>
+              <p class="text-inherit mb-0">
+                <li>make sure you feed your Basic info details correctly after login</li>
+                <li>finish your 1st module as soon as you login </li>
+                <li>save this page "Add to Home screen"</li>
+                <li>Each module will have a set of questionarie that hs to be answred on that day itself</li>
+                <li>You can respond to the module questions only once , so do it keeping that in mind</li>
+                <li>with in every 24hrs your next module gets unlocked , so keep a track </li>
+              </p>
+            </div>
+          </div>
+          <!-- End Alert -->
+
+          <!-- Timeline -->
+          <ul class="step ml-1 mr-1">
+            <!-- Timeline Item -->
+            <li class="step-item">
+              <div class="step-content-wrapper">
+                <span class="step-icon step-icon-sm step-icon-soft-primary"><i class="far fa-calendar-alt"></i></span>
+                <div class="step-content">
+                  <span class="timeline-heading text-dark">MODULE TITLE</span>
+                  <h4 class="h5 text-danger">module-1</h4>
+                  <div class="mb-4">
+                    <p class="mb-2">
+                      <span class="font-weight-bold"></span> The Stige team
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam cum facilis libero vel molestiae
+                      sint voluptatem incidunt facere repellendus praesentium.
+                      relevant track.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- End Timeline Item -->
+
+            <!-- Timeline Item -->
+            <li class="step-item">
+              <div class="step-content-wrapper">
+                <span class="step-icon step-icon-sm step-icon-soft-primary"><i class="far fa-calendar-alt"></i></span>
+                <div class="step-content">
+                  <span class="timeline-heading text-dark">MODULE TITLE</span>
+                  <h4 class="h5 text-danger">module-2</h4>
+                  <div class="mb-4">
+                    <p class="mb-2">
+                      <span class="timeline-heading text-dark">8 Weeks: </span> During
+                      the span of this period, you will be extensively
+                      working on live projects and building real product
+                      with real teams. This would be a fast paced training
+                      and students are expected to follow and complete all
+                      assignments on time.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- End Timeline Item -->
+
+            <!-- Timeline Item -->
+            <li class="step-item">
+              <div class="step-content-wrapper">
+                <span class="step-icon step-icon-sm step-icon-soft-primary"><i class="far fa-calendar-alt"></i></span>
+                <div class="step-content">
+                  <span class="timeline-heading text-dark">MODULE TITLE</span>
+                  <h4 class="h5 text-danger">module-3</h4>
+                  <p class="mb-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quis dicta animi? Ex tempora quam
+                    eum rerum ipsa autem expedita officia sint facere quisquam molestias quae facilis possimus
+                    molestiae laudantium minus, praesentium quidem deserunt, consequatur enim eligendi? Ipsam,
+                    incidunt dolore dignissimos provident tempora deleniti eum unde iste dicta possimus ea.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <!-- End Timeline Item -->
+
+            <!-- Timeline Item -->
+            <li class="step-item">
+              <div class="step-content-wrapper">
+                <span class="step-icon step-icon-sm step-icon-soft-primary"><i class="far fa-calendar-alt"></i></span>
+                <div class="step-content">
+                  <span class="timeline-heading text-dark">MODULE TITLE</span>
+                  <h4 class="h5 text-danger">module-4</h4>
+                  <p class="mb-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quibusdam facere iste aliquam
+                    labore nesciunt. Repellendus dicta eligendi molestiae porro, deleniti magni numquam doloremque ea
+                    quidem debitis a. Dignissimos vel magnam quaerat enim minima consectetur commodi, provident
+                    voluptatem asperiores in culpa, ullam quis, accusantium error quo doloribus dolore. Ex, iure!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <!-- End Timeline Item -->
+
+            <!-- Timeline Item -->
+            <li class="step-item">
+              <div class="step-content-wrapper">
+                <span class="step-icon step-icon-sm step-icon-soft-primary"><i class="far fa-calendar-alt"></i></span>
+                <div class="step-content">
+                  <span class="timeline-heading text-dark">MODULE TITLE</span>
+                  <h4 class="h5 text-danger">module-5</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam porro accusantium, iste ex
+                    quibusdam officia blanditiis, similique tenetur veniam facilis ipsum. Blanditiis voluptates
+                    laborum reprehenderit. Laboriosam consectetur cum quidem, et quos accusantium voluptatem ad
+                    praesentium consequuntur eaque, fuga porro facilis quasi, ea magni mollitia commodi aliquam
+                    voluptas accusamus fugit rem?
+                  </p>
+                </div>
+              </div>
+            </li>
+            <!-- End Timeline Item -->
+            <!-- Timeline Item -->
+            <!-- End Timeline Item -->
+          </ul>
+          <!-- End Timeline -->
+        </div>
+        <!-- End Card -->
+      </div>
+    </div>
+    <!-- End Row -->
+    </div>
+    <!-- End Modal cancel subscription -->
+    <!-- End Content Section -->
+  </main>
+  <!-- ========== END MAIN ========== -->
+  <!-- JS Implementing Plugins -->
+  <script src="./assets/js/vendor.min.js"></script>
+  <!-- JS Front -->
+  <script src="./assets/js/theme.min.js"></script>
+  <div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+</body>
+
+
+<script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBrk1_BujMlKHws0cZDQ6LXv3JIPCPbaMY",
+    authDomain: "training-module-82a7f.firebaseapp.com",
+    projectId: "training-module-82a7f",
+    storageBucket: "training-module-82a7f.appspot.com",
+    messagingSenderId: "283721079149",
+    appId: "1:283721079149:web:4e8a2176f5fedd05f02264",
+    measurementId: "G-7CYVNCRK5E"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script>
+  $(document).ready(function () {
+    $('input[type="checkbox"]').click(function () {
+      if ($(this).prop("checked") == true) {
+        alert("Checkbox is checked.");
+      }
+      else if ($(this).prop("checked") == false) {
+        alert("Checkbox is unchecked.");
+      }
+      else if ($(this).prop("checked") == false) {
+        alert("Checkbox is unchecked.");
+      }
+    });
+  });
+</script>
+
+<script>
+  document.getElementById('logout').addEventListener('click', LogoutUser);
+
+  function LogoutUser() {
+    console.log('Logout Btn Call')
+    firebase.auth().signOut().then(() => {
+      window.location = 'index.html';
+      alert("logged out");
+
+
+    }).catch(e => {
+      console.log(e)
+    })
+  }
+
+  let provider = new firebase.auth.GoogleAuthProvider()
+
+
+  function checkAuthState() {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+
+        var authEmail = firebase.auth().currentUser.email;
+        document.getElementById('user-pemail').value = authEmail;
+        RetrieveData_inDocument();
+
+      } else {
+        window.location = "index.html"
+
+
+      }
+    })
+  }
+
+  checkAuthState()
+
+
+
+
+  let cloudDB = firebase.firestore();
+
+  var Name, Email, Phone
+
+  Email = document.getElementById('user-pemail').value;
+  Name = document.getElementById('user-pname').value;
+  Phone = document.getElementById('user-pphone').value;
+
+
+
+  function Add_Doc_WithID() {
+    Email = document.getElementById('user-pemail').value;
+    Name = document.getElementById('user-pname').value;
+    Phone = document.getElementById('user-pphone').value;
+
+    cloudDB.collection("Users").doc(Email).set({
+      Name: Name,
+      Email: Email,
+      Phone: Phone,
+
+
+
+    })
+      .then(function (docRef) {
+        console.log("Documnet written", Email);
+        console.log('Details Saved/Updated')
+      })
+      .catch(function (error) {
+        console.error("error fatal", error);
+      })
+  }
+
+  function RetrieveData_inDocument() {
+    var authEmail = firebase.auth().currentUser.email;
+    cloudDB.collection("Users").doc(authEmail).get()
+      .then(function (doc) {
+        if (doc.exists) {
+          Name = document.getElementById('user-pname')
+          Phone = document.getElementById('user-pphone')
+          Name.value = doc.data().Name;
+          Phone.value = doc.data().Phone;
+
+          Name.setAttribute('disabled', "disabled");
+          Phone.setAttribute('disabled', "disabled");
+
+
+        } else {
+          console.log("doc error");
+        }
+      })
+      .catch(function (error) {
+        console.log("error", error);
+      })
+
+    cloudDB.collection('modules').doc(authEmail).get()
+      .then(function (doc) {
+
+        if (doc.exists) {
+          var module1 = doc.data().module1;
+          var module2 = doc.data().module2;
+          var module3 = doc.data().module3;
+          var module4 = doc.data().module4;
+          var module5 = doc.data().module5;
+          var module6 = doc.data().module6;
+          var module7 = doc.data().module7;
+
+          var module2un = doc.data().module2un;
+          var module3un = doc.data().module3un;
+          var module4un = doc.data().module4un;
+          var module5un = doc.data().module5un;
+          var module6un = doc.data().module6un;
+          var module7un = doc.data().module7un;
+
+          function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+              }
+              if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+              }
+            }
+            return "";
+          }
+
+          if (module1 == true) {
+
+            var cnt = 30;
+            function counter() {
+              if (getCookie("cnt") > 0) {
+                cnt = getCookie("cnt");
+              }
+              cnt -= 1;
+              document.cookie = "cnt=" + cnt;
+              //  jQuery("#counter").val(getCookie("cnt"));
+              document.getElementById('cnt').innerHTML = Math.round(cnt / 60) + "min";
+              console.log(cnt);
+
+              if (cnt > 0) {
+                setTimeout(counter, 1000);
+              }
+              else if (cnt == 0) {
+                document.getElementById('module-2').removeAttribute('onclick')
+                document.getElementById('module-2un').className = "fas fa-unlock nav-icon";
+                document.getElementById('cnt').style.visibility = "hidden";
+
+                cloudDB.collection('modules').doc(authEmail).update({
+                  module2un: "unlocked"
+                })
+              }
+            }
+
+            counter();
+
+            ////// start Condition checking and unlocking ///////////
+
+            if (module2un == 'unlocked') {
+              document.getElementById('module-2').removeAttribute('onclick')
+              document.getElementById('module-2un').className = "fas fa-unlock nav-icon";
+              document.getElementById('cnt').style.visibility = "hidden";
+
+            }
+            /////// end Condition checking and unlocking ///////
+          }
+
+          if (module2 == true) {
+
+            var cnt1 = 30;
+            function counter1() {
+              if (getCookie("cnt1") > 0) {
+                cnt1 = getCookie("cnt1");
+              }
+              cnt1 -= 1;
+              document.cookie = "cnt=" + cnt1;
+              //  jQuery("#counter").val(getCookie("cnt"));
+              document.getElementById('cnt1').innerHTML = Math.round(cnt1 / 60) + "min";
+              console.log(cnt1);
+
+              if (cnt1 > 0) {
+                setTimeout(counter1, 1000);
+              }
+              else if (cnt1 == 0) {
+                document.getElementById('module-3').removeAttribute('onclick')
+                document.getElementById('module-3un').className = "fas fa-unlock nav-icon";
+                document.getElementById('cnt1').style.visibility = "hidden";
+
+                cloudDB.collection('modules').doc(authEmail).update({
+                  module3un: "unlocked"
+                })
+              }
+            }
+            counter1();
+
+            if (module3un == 'unlocked') {
+              document.getElementById('module-3').removeAttribute('onclick')
+              document.getElementById('module-3un').className = "fas fa-unlock nav-icon";
+              document.getElementById('cnt1').style.visibility = "hidden";
+
+            }
+
+
+          }
+
+
+
+
+          if (module3 == true) {
+
+            var cnt2 = 30;
+            function counter2() {
+              if (getCookie("cnt2") > 0) {
+                cnt2 = getCookie("cnt2");
+              }
+              cnt2 -= 1;
+              document.cookie = "cnt=" + cnt2;
+              //  jQuery("#counter").val(getCookie("cnt"));
+              document.getElementById('cnt2').innerHTML = Math.round(cnt2 / 60) + "min";
+              console.log(cnt2);
+
+              if (cnt2 > 0) {
+                setTimeout(counter2, 1000);
+              }
+              else if (cnt2 == 0) {
+                document.getElementById('module-4').removeAttribute('onclick')
+                document.getElementById('module-4un').className = "fas fa-unlock nav-icon";
+                document.getElementById('cnt2').style.visibility = "hidden";
+
+                cloudDB.collection('modules').doc(authEmail).update({
+                  module4un: "unlocked"
+                })
+              }
+            }
+            counter2();
+
+            if (module4un == 'unlocked') {
+              document.getElementById('module-4').removeAttribute('onclick')
+              document.getElementById('module-4un').className = "fas fa-unlock nav-icon";
+              document.getElementById('cnt2').style.visibility = "hidden";
+
+            }
+
+
+          }
+
+          if (module4 == true) {
+            var cnt3 = 30;
+            function counter3() {
+              if (getCookie("cnt3") > 0) {
+                cnt3 = getCookie("cnt3");
+              }
+              cnt3 -= 1;
+              document.cookie = "cnt=" + cnt3;
+              //  jQuery("#counter").val(getCookie("cnt"));
+              document.getElementById('cnt3').innerHTML = Math.round(cnt3 / 60) + "min";
+              console.log(cnt3);
+
+              if (cnt3 > 0) {
+                setTimeout(counter3, 1000);
+              }
+              else if (cnt3 == 0) {
+                document.getElementById('module-5').removeAttribute('onclick')
+                document.getElementById('module-5un').className = "fas fa-unlock nav-icon";
+                document.getElementById('cnt3').style.visibility = "hidden";
+
+                cloudDB.collection('modules').doc(authEmail).update({
+                  module5un: "unlocked"
+                })
+              }
+            }
+            counter3();
+
+            if (module5un == 'unlocked') {
+              document.getElementById('module-5').removeAttribute('onclick')
+              document.getElementById('module-5un').className = "fas fa-unlock nav-icon";
+              document.getElementById('cnt3').style.visibility = "hidden";
+            }
+
+
+          }
+
+          if (module5 == true) {
+            var cnt4 = 30;
+            function counter4() {
+              if (getCookie("cnt4") > 0) {
+                cnt4 = getCookie("cnt4");
+              }
+              cnt4 -= 1;
+              document.cookie = "cnt=" + cnt4;
+              //  jQuery("#counter").val(getCookie("cnt"));
+              document.getElementById('cnt4').innerHTML = Math.round(cnt4 / 60) + "min";
+              console.log(cnt4);
+
+              if (cnt4 > 0) {
+                setTimeout(counter4, 1000);
+              }
+              else if (cnt4 == 0) {
+                document.getElementById('module-6').removeAttribute('onclick')
+                document.getElementById('module-6un').className = "fas fa-unlock nav-icon";
+                document.getElementById('cnt4').style.visibility = "hidden";
+
+                cloudDB.collection('modules').doc(authEmail).update({
+                  module6un: "unlocked"
+                })
+              }
+            }
+            counter4();
+
+            if (module6un == 'unlocked') {
+              document.getElementById('module-6').removeAttribute('onclick')
+              document.getElementById('module-6un').className = "fas fa-unlock nav-icon";
+              document.getElementById('cnt4').style.visibility = "hidden";
+
+            }
+          }
+
+          if (module6 == true) {
+            var cnt5 = 30;
+            function counter5() {
+              if (getCookie("cnt5") > 0) {
+                cnt5 = getCookie("cnt5");
+              }
+              cnt5 -= 1;
+              document.cookie = "cnt=" + cnt5;
+              //  jQuery("#counter").val(getCookie("cnt"));
+              document.getElementById('cnt5').innerHTML = Math.round(cnt5 / 60) + "min";
+              console.log(cnt5);
+
+              if (cnt5 > 0) {
+                setTimeout(counter5, 1000);
+              }
+              else if (cnt5 == 0) {
+                document.getElementById('module-7').removeAttribute('onclick')
+                document.getElementById('module-7un').className = "fas fa-unlock nav-icon";
+                document.getElementById('cnt5').style.visibility = "hidden";
+
+                cloudDB.collection('modules').doc(authEmail).update({
+                  module7un: "unlocked"
+                })
+              }
+            }
+            counter5();
+
+            if (module7un == 'unlocked') {
+              document.getElementById('module-7').removeAttribute('onclick')
+              document.getElementById('module-7un').className = "fas fa-unlock nav-icon";
+              document.getElementById('cnt5').style.visibility = "hidden";
+            }
+
+          }
+        }
+      })
+  }
+
+  document.getElementById('submit').onclick = function () {
+
+    Add_Doc_WithID();
+
+  }
+
+</script>
+<script>
+  $("#submit").on('click', function () {
+    $(".custom-model-main").addClass('model-open');
+  });
+  $(".close-btn, .bg-overlay").click(function () {
+    $(".custom-model-main").removeClass('model-open');
+  });
+</script>
+
+</html>

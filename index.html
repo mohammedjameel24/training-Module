@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link type="image/x-icon" rel="icon"
+    href="https://certifiedblackhatin.files.wordpress.com/2021/03/cropped-56bae-cropped-black-white-and-triangle-data-chase-games-logo-2-2.png?w=192">
+  <title>Sales Module | certifiedblackhat</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+  .admin {
+    margin: 20px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    position: relative;
+    left: 80%;
+
+
+
+
+  }
+</style>
+
+<body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/8.2.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/8.2.5/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
+
+  <a class="admin" href="/Admin/index.html"><button class="w3-button w3-border w3-hover-red">Admin</button></a>
+
+
+  <main action="index.html" class="login-form">
+    <h1><img id="logo" src="/assets/img/main.png">Sales Module <br>Certified BlackHat</h1>
+    <div class="checkbox">
+      <input type="checkbox" id="agree" required>
+      <label for="agree">Grant us access to your data for R&D purpose?</label><br>
+    </div>
+
+    <button id="logbtn">
+      <svg aria-hidden="true" class="native svg-icon iconGoogle" width="25" height="25" viewBox="0 0 18 18">
+        <path d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 002.38-5.88c0-.57-.05-.66-.15-1.18z"
+          fill="#4285F4"></path>
+        <path d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 01-7.18-2.54H1.83v2.07A8 8 0 008.98 17z"
+          fill="#34A853"></path>
+        <path d="M4.5 10.52a4.8 4.8 0 010-3.04V5.41H1.83a8 8 0 000 7.18l2.67-2.07z" fill="#FBBC05"></path>
+        <path d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 001.83 5.4L4.5 7.49a4.77 4.77 0 014.48-3.3z"
+          fill="#EA4335"></path>
+      </svg>
+    </button>
+  </main>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBrk1_BujMlKHws0cZDQ6LXv3JIPCPbaMY",
+      authDomain: "training-module-82a7f.firebaseapp.com",
+      projectId: "training-module-82a7f",
+      storageBucket: "training-module-82a7f.appspot.com",
+      messagingSenderId: "283721079149",
+      appId: "1:283721079149:web:4e8a2176f5fedd05f02264",
+      measurementId: "G-7CYVNCRK5E"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    //------------------------------------------Authentication---------------------------------//
+
+    document.getElementById('logbtn').addEventListener('click', GoogleLogin, checkAuthState)
+
+
+    let provider = new firebase.auth.GoogleAuthProvider()
+
+    function GoogleLogin() {
+      if (document.getElementById('agree').checked) {
+
+        console.log('Login Btn Call')
+        firebase.auth().signInWithPopup(provider).then(res => {
+          alert('logged in');
+
+        }).catch(e => {
+          console.log(e)
+        })
+      } else {
+        alert('Checkbox');
+
+      }
+    }
+    function checkAuthState() {
+      firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+          window.location = "home.html";
+        } else {
+
+
+        }
+      })
+    }
+    checkAuthState()
+  </script>
+
+
+</body>
+
+</html>

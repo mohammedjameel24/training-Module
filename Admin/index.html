@@ -1,0 +1,281 @@
+<html>
+
+<head>
+  <title>Sales Module | certifiedblackhat</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Admin Users Only</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button type="button" class="btn btn-primary" onclick="login()">Login to Account</button>
+  </div>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <p class="h1">Admin Panel</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle"
+      viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+      <path fill-rule="evenodd"
+        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+    </svg>
+    <p class="text-muted" id="user_para"></p>
+    <br>
+
+    <p class="text-muted">Upload Preview
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-play-btn-fill"
+        viewBox="0 0 16 16">
+        <path
+          d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+      </svg>
+    </p>
+    <video id="video" src=""></video>
+    <br>
+    <br>
+
+    <div class="form-floating">
+      <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+        <option value="module1" selected>module1</option>
+        <option value="module2">module2</option>
+        <option value="module3">module3</option>
+        <option value="module4">module4</option>
+        <option value="module5">module5</option>
+        <option value="module6">module6</option>
+        <option value="module7">module7</option>
+      </select>
+      <label for="floatingSelect" style="color: black;
+      font-weight: bold;">MODULE</label>
+    </div>
+    <br>
+
+    <!-- <span>Module number : (eg: moduleX)<input id="namebox" type="text" style="align-items: center;"></span><br><br> -->
+    <label id="progress"></label>
+
+    <button type="button" class="btn btn-primary" id="select">Select Video</button>
+    <br>
+    <button type="button" class="btn btn-success" id="upload">Upload Video</button>
+    <br>
+    <button type="button" class="btn btn-danger" onclick="logout()">Logout</button>
+    <br>
+    <button type="button" class="btn btn-dark" onClick="window.location.reload()">Refresh</button>
+    <br>
+    <br>
+
+  </div>
+  <div style="max-width: 400px; width: auto; margin:auto; padding-bottom: 50px;" id="moduleQuestions">
+    <div class="input-group mb-3">
+      <input type="text" id="Q1" class="form-control" placeholder="Question no. 1 for moduleX"
+        aria-label="Question no. 1 for moduleX" aria-describedby="button-addon2">
+      <button class="btn btn-primary" type="button" id="button-addon2" onclick="questionOne()">Question 1</button>
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" id="Q2" class="form-control" placeholder="Question no. 2 for moduleX"
+        aria-label="Question no. 2 for moduleX" aria-describedby="button-addon2">
+      <button class="btn btn-primary" type="button" id="button-addon2" onclick="questionTwo()">Question 2</button>
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" id="Q3" class="form-control" placeholder="Question no. 3 for moduleX"
+        aria-label="Question no. 3 for moduleX" aria-describedby="button-addon2">
+      <button class="btn btn-primary" type="button" id="button-addon2" onclick="questionThree()">Question 3</button>
+    </div>
+  </div>
+
+
+  <div id="accordion" class="accordion"></div>
+
+
+
+  <script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyBrk1_BujMlKHws0cZDQ6LXv3JIPCPbaMY",
+      authDomain: "training-module-82a7f.firebaseapp.com",
+      projectId: "training-module-82a7f",
+      storageBucket: "training-module-82a7f.appspot.com",
+      messagingSenderId: "283721079149",
+      appId: "1:283721079149:web:4e8a2176f5fedd05f02264",
+      measurementId: "G-7CYVNCRK5E"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // ---------------------------SELECT------------------------//
+    var VidName, VidUrl;
+    var files = [];
+    var reader = new FileReader();
+
+    document.getElementById('select').onclick = function (e) {
+
+      var input = document.createElement('input');
+      input.type = 'file';
+
+      input.onchange = e => {
+        files = e.target.files;
+        reader = new FileReader();
+        reader.onload = function () {
+          document.getElementById('video').src = reader.result;
+          document.getElementById('video').setAttribute('controls', "true");
+
+          console.log('video loaded');
+        }
+        reader.readAsDataURL(files[0]);
+      }
+      input.click();
+    }
+
+    //----------------------------UPLOAD--------------------------//
+
+    var cloudDB = firebase.firestore();
+    document.getElementById('upload').onclick = function () {
+      VidName = document.getElementById('floatingSelect').value;
+      var uploadTask = firebase.storage().ref('Videos/' + VidName).put(files[0]);
+
+      uploadTask.on('state_changed', function (snapshot) {
+        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        document.getElementById('progress').innerHTML = 'Upload  :' + Math.round(progress) + '%';
+        console.log('uploaded')
+      },
+        function (error) {
+          alert('error uploading....');
+        },
+
+        function () {
+          uploadTask.snapshot.ref.getDownloadURL().then(function (url) {
+            VidUrl = url;
+
+            cloudDB.collection("Videos").doc(VidName).set({
+              Module: VidName,
+              Link: VidUrl
+            });
+
+            console.log('added to storage');
+          });
+        }
+
+      );
+    }
+
+    function questionOne() {
+      var moduleNum = document.getElementById('floatingSelect').value;
+      var Questionone = document.getElementById('Q1').value;
+      var Questiontwo = document.getElementById('Q2').value;
+      var Questionthree = document.getElementById('Q3').value;
+
+      cloudDB.collection("Questions").doc(moduleNum).get().then(function (doc) {
+        if (doc.exists) {
+          cloudDB.collection("Questions").doc(moduleNum).update({
+            question1: Questionone,
+          })
+            .then(function (docRef) {
+              console.log("document written",);
+            })
+            .catch(function (error) {
+              console.error("error fatal", error);
+            })
+
+        } else {
+          cloudDB.collection("Questions").doc(moduleNum).set({
+            question1: Questionone,
+          })
+            .then(function (docRef) {
+              console.log("document written",);
+            })
+            .catch(function (error) {
+              console.error("error fatal", error);
+            })
+        }
+
+
+      })
+    }
+    function questionTwo() {
+      var moduleNum = document.getElementById('floatingSelect').value;
+      var Questionone = document.getElementById('Q1').value;
+      var Questiontwo = document.getElementById('Q2').value;
+      var Questionthree = document.getElementById('Q3').value;
+
+      cloudDB.collection("Questions").doc(moduleNum).get().then(function (doc) {
+        if (doc.exists) {
+          cloudDB.collection("Questions").doc(moduleNum).update({
+            question2: Questiontwo,
+          })
+            .then(function (docRef) {
+              console.log("document written",);
+            })
+            .catch(function (error) {
+              console.error("error fatal", error);
+            })
+
+        } else {
+          cloudDB.collection("Questions").doc(moduleNum).set({
+            question2: Questiontwo,
+          })
+            .then(function (docRef) {
+              console.log("document written",);
+            })
+            .catch(function (error) {
+              console.error("error fatal", error);
+            })
+        }
+
+
+      })
+    }
+
+    function questionThree() {
+      var moduleNum = document.getElementById('floatingSelect').value;
+      var Questionone = document.getElementById('Q1').value;
+      var Questiontwo = document.getElementById('Q2').value;
+      var Questionthree = document.getElementById('Q3').value;
+
+      cloudDB.collection("Questions").doc(moduleNum).get().then(function (doc) {
+        if (doc.exists) {
+          cloudDB.collection("Questions").doc(moduleNum).update({
+            question3: Questionthree,
+          })
+            .then(function (docRef) {
+              console.log("document written",);
+            })
+            .catch(function (error) {
+              console.error("error fatal", error);
+            })
+
+        } else {
+          cloudDB.collection("Questions").doc(moduleNum).set({
+            question3: Questionthree,
+          })
+            .then(function (docRef) {
+              console.log("document written",);
+            })
+            .catch(function (error) {
+              console.error("error fatal", error);
+            })
+        }
+
+
+      })
+    }
+
+
+  </script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>

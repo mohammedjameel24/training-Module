@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Noto+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap');
+:root{
+    --font1: 'Noto Sans', sans-serif; 
+    --font2: 'Baloo Bhaina 2', cursive;
+    --font3: 'Alegreya Sans', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: montserrat;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+  background-image: url(/assets/img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.login-form{
+  position: absolute;
+  width: 360px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  justify-content: center;
+  backdrop-filter: blur(15px);
+  z-index: 10;
+  height: 400px;
+  padding: 80px 40px;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-form h1{
+  color: white;
+  text-align: center;
+  font-family: var(--font3);
+  margin-top: 25px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 1.9em;
+  letter-spacing: 1px;
+}
+
+label {
+  color: white;
+  font-family: var(--font3);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  position: absolute;
+  padding: 0 0 2mm 2mm;
+
+}
+
+#logbtn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: black;
+  border-radius: 2mm;
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #009ffd 0%,#2a2a72 74%);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  top: 60px;
+  transition: .5s;
+}
+
+#logbtn:hover{
+  background-position: right;
+}
+
+.bottom-text{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 13px;
+}
+#logo {
+  position:absolute;
+  width:60px;
+  height:60px;
+  border-radius: 2mm;
+  left: 10%;
+  top: 35px;
+}
+.checkbox {
+  position: relative;
+  top: 50px;
+}
+@media (max-width:1200px) {
+  .login-form {
+    zoom:1.5;
+  }
+
+}
+
