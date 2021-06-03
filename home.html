@@ -71,23 +71,8 @@
             </div>
 
             <!-- Responsive Toggle Button -->
-            <button type="button" class="navbar-toggler btn btn-icon btn-sm rounde-circle d-lg-none"
-              aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNav" data-toggle="collapse"
-              data-target="#sidebarNav">
-              <span class="navbar-toggler-default">
-                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor"
-                    d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z">
-                  </path>
-                </svg>
-              </span>
-              <span class="navbar-toggler-toggled">
-                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor"
-                    d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z">
-                  </path>
-                </svg>
-              </span>
+            <button type="button" class="btn btn-white">
+              <a class="btn-white" onclick="LogoutUser()">Log out</a>
             </button>
             <!-- End Responsive Toggle Button -->
           </div>
@@ -115,93 +100,7 @@
       <div class="row">
         <div class="col-lg-3">
           <!-- Navbar -->
-          <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
-            <div id="sidebarNav" class="collapse navbar-collapse navbar-vertical">
-              <!-- Card -->
-              <div class="card mb-5" style="margin:90px 0px;">
-                <div class="card-body">
-                  <!-- Avatar -->
 
-                  <!-- Nav -->
-                  <h6 class="text-cap small">Account</h6>
-
-                  <!-- List -->
-                  <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="index.html">
-                        <i class="fas fa-id-card nav-icon"></i> Personal info
-                      </a>
-                    </li>
-
-                    <!-- End List -->
-
-                    <h6 class="text-cap small">Sales Module</h6>
-
-                    <!-- List -->
-                    <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
-                      <li class="nav-item">
-                        <a class="nav-link" href="/modules/Day-1.html" target="_blank">
-                          <i class="fas fa-unlock nav-icon" data-target="#LockedContent"></i> module-1
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a id="module-2" class="nav-link" target="blank" href="/modules/Day-2.html"
-                          onclick="return false">
-                          <i id="module-2un" class="fas fa-lock nav-icon"></i> module-2 &ensp;<span id="cnt"></span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a id="module-3" class="nav-link" target="blank" href="/modules/Day-3.html"
-                          onclick="return false">
-                          <i id="module-3un" class="fas fa-lock nav-icon"></i> module-3 &ensp;<span id="cnt1"></span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a id="module-4" class="nav-link" target="blank" href="/modules/Day-4.html"
-                          onclick="return false">
-                          <i id="module-4un" class="fas fa-lock nav-icon"></i> module-4 &ensp;<span id="cnt2"></span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a id="module-5" class="nav-link" target="blank" href="/modules/Day-5.html"
-                          onclick="return false">
-                          <i id="module-5un" class="fas fa-lock nav-icon"></i> module-5 &ensp;<span id="cnt3"></span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a id="module-6" class="nav-link" target="blank" href="/modules/Day-6.html"
-                          onclick="return false">
-                          <i id="module-6un" class="fas fa-lock nav-icon"></i> module-6 &ensp;<span id="cnt4"></span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a id="module-7" class="nav-link" target="blank" href="/modules/Day-7.html"
-                          onclick="return false">
-                          <i id="module-7un" class="fas fa-lock nav-icon"></i> module-7 &ensp;<span id="cnt5"></span>
-                        </a>
-                      </li>
-                    </ul>
-                    <!-- End List -->
-                    <!-- End Modal cancel subscription -->
-
-                    <div class="d-lg-none">
-                      <div class="dropdown-divider"></div>
-
-                      <!-- List -->
-                      <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
-                        <li class="nav-item">
-                          <a class="btn btn-sm btn-soft-dark" onclick="LogoutUser()">Log out</a>
-                        </li>
-                      </ul>
-                      <!-- End List -->
-                    </div>
-
-                    <!-- End Nav -->
-                </div>
-              </div>
-              <!-- End Card -->
-            </div>
-          </div>
           <!-- End Navbar -->
         </div>
 
@@ -346,6 +245,91 @@
               </p>
             </div>
           </div>
+
+
+          <div class="col-lg-3" >
+            <!-- Navbar -->
+            <div class="" >
+              <div id="sidebarNav" class="navbar-collapse navbar-vertical collapse show" style="position: relative; bottom: 100px; margin-bottom:-150px;" _mstvisible="0">
+                <!-- Card -->
+                <div class="card mb-5" style="margin:90px 0px;" _mstvisible="1">
+                  <div class="card-body" _mstvisible="2">
+                    <!-- Avatar -->
+  
+                    <!-- Nav -->
+                    <h6 class="text-cap small" _msthash="585858" _msttexthash="95719" _mstvisible="3">Account</h6>
+  
+                    <!-- List -->
+                    <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4" _mstvisible="3">
+                      <li class="nav-item" _mstvisible="4">
+                        <a class="nav-link active" href="index.html" _mstvisible="5">
+                          <i class="fas fa-id-card nav-icon" _mstvisible="6"></i><font _mstmutation="1" _msthash="949013" _msttexthash="207025" _mstvisible="6"> Personal info
+                        </font></a>
+                      </li>
+  
+                      <!-- End List -->
+  
+                      <h6 class="text-cap small" _msthash="774969" _msttexthash="176423" _mstvisible="4">Sales Module</h6>
+  
+                      <!-- List -->
+                      <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2" _mstvisible="4">
+                        <li class="nav-item" _mstvisible="5">
+                          <a class="nav-link" href="/modules/Day-1.html" target="_blank" _mstvisible="6">
+                            <i class="fas fa-unlock nav-icon" data-target="#LockedContent" _mstvisible="7"></i><font _mstmutation="1" _msthash="1187329" _msttexthash="96096" _mstvisible="7"> module-1
+                          </font></a>
+                        </li>
+                        <li class="nav-item" _mstvisible="5">
+                          <a id="module-2" class="nav-link" target="blank" href="/modules/Day-2.html" _mstvisible="6">
+                            <i id="module-2un" class="fas fa-unlock nav-icon" _mstvisible="7"></i><font _mstmutation="1" _msthash="96278" _msttexthash="96278" _mstvisible="7"> module-2  </font><span id="cnt" _mstvisible="7" _msthash="34021" _msttexthash="42289" style="visibility: hidden;">0min</span>
+                          </a>
+                        </li>
+                        <li class="nav-item" _mstvisible="5">
+                          <a id="module-3" class="nav-link" target="blank" href="/modules/Day-3.html" onclick="return false" _mstvisible="6">
+                            <i id="module-3un" class="fas fa-lock nav-icon" _mstvisible="7"></i><font _mstmutation="1" _msthash="96460" _msttexthash="96460" _mstvisible="7"> module-3  </font><span id="cnt1" _mstvisible="7"></span>
+                          </a>
+                        </li>
+                        <li class="nav-item" _mstvisible="5">
+                          <a id="module-4" class="nav-link" target="blank" href="/modules/Day-4.html" onclick="return false" _mstvisible="6">
+                            <i id="module-4un" class="fas fa-lock nav-icon" _mstvisible="7"></i><font _mstmutation="1" _msthash="96642" _msttexthash="96642" _mstvisible="7"> module-4  </font><span id="cnt2" _mstvisible="7"></span>
+                          </a>
+                        </li>
+                        <li class="nav-item" _mstvisible="5">
+                          <a id="module-5" class="nav-link" target="blank" href="/modules/Day-5.html" onclick="return false" _mstvisible="6">
+                            <i id="module-5un" class="fas fa-lock nav-icon" _mstvisible="7"></i><font _mstmutation="1" _msthash="96824" _msttexthash="96824" _mstvisible="7"> module-5  </font><span id="cnt3" _mstvisible="7"></span>
+                          </a>
+                        </li>
+                        <li class="nav-item" _mstvisible="5">
+                          <a id="module-6" class="nav-link" target="blank" href="/modules/Day-6.html" onclick="return false" _mstvisible="6">
+                            <i id="module-6un" class="fas fa-lock nav-icon" _mstvisible="7"></i><font _mstmutation="1" _msthash="97006" _msttexthash="97006" _mstvisible="7"> module-6  </font><span id="cnt4" _mstvisible="7"></span>
+                          </a>
+                        </li>
+                        <li class="nav-item" _mstvisible="5">
+                          <a id="module-7" class="nav-link" target="blank" href="/modules/Day-7.html" onclick="return false" _mstvisible="6">
+                            <i id="module-7un" class="fas fa-lock nav-icon" _mstvisible="7"></i><font _mstmutation="1" _msthash="97188" _msttexthash="97188" _mstvisible="7"> module-7  </font><span id="cnt5" _mstvisible="7"></span>
+                          </a>
+                        </li>
+                      </ul>
+                      <!-- End List -->
+                      <!-- End Modal cancel subscription -->
+  
+                      <div class="d-lg-none" _mstvisible="4">
+                        <div class="dropdown-divider" _mstvisible="5"></div>
+  
+                        <!-- List -->
+
+                        <!-- End List -->
+                      </div>
+  
+                      <!-- End Nav -->
+                  </ul></div>
+                </div>
+                <!-- End Card -->
+              </div>
+            </div>
+            <!-- End Navbar -->
+          </div>
+
+
           <!-- End Alert -->
 
           <!-- Timeline -->
